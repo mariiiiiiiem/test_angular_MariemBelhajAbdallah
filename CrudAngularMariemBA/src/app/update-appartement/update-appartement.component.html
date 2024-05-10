@@ -1,0 +1,42 @@
+<div class="container">
+
+  <form [formGroup]="formAppart" >
+    <div class="input-group p-2">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+          appart num
+        </span>
+      </div>
+      <input type="text" class="form-control" formControlName="apartNum">
+      <div  class="alert alert-danger">
+        Appart num is invalid
+      </div>
+    </div>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+          Description
+        </span>
+      </div>
+      <input type="text" class="form-control" formControlName="description">
+      <div  class="alert alert-danger">
+        description is invalid
+      </div>
+    </div>
+    <div class="input-group p-2">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+          residance
+        </span>
+      </div>
+      <input type="text" class="form-control" formControlName="residence">
+      <div * class="alert alert-danger">
+        address is invalid
+      </div>
+    </div>
+    <div class="input-group p-3">
+      <input (click)="update()" type="submit" class="btn btn-primary" >
+    </div>
+  </form>
+
+</div>

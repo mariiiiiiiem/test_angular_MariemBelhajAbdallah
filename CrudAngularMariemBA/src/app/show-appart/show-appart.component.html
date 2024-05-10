@@ -1,0 +1,9 @@
+<div *ngFor="let l of Appart">
+  <img [src]="l.residence.image" class="card-img-top " alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ l.residence.address }}</h5>
+    <p class="card-text">{{ l.description}}</p>
+    <p class="card-text"> {{l.residence.name}}</p>
+  </div>
+</div>
+

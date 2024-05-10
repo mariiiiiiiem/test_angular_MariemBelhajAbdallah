@@ -1,0 +1,15 @@
+<a routerLink="/addAppart" class="btn btn-success">add appartement</a>
+
+<div class="row">
+<div *ngFor="let appartement of lisappart;index as i"  class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{appartement.residence.image}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{appartement.residence.name}}</h5>
+    <p class="card-text">{{appartement.description}}</p>
+    <a (click)="deleteAppart(appartement.id,i)" class="btn btn-danger">delete</a>
+    <a [routerLink]="['/update',appartement.id]" (click)="update()" class="btn btn-dark">update</a>
+    <a [routerLink]="['/showAppart',appartement.id]" class="btn btn-primary">show</a>
+
+  </div>
+</div>
+</div>

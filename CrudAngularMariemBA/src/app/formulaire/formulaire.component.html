@@ -1,0 +1,18 @@
+<form [formGroup]="formulaire"  >
+  <div class="form-group">
+    <label for="exampleInputEmail1">ID</label>
+    <input formControlName="id" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter id">
+    <div *ngIf="id!.invalid && id!.touched && id?.hasError?.('pattern')" class="alert alert-danger">
+      id is invalid
+    </div>
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Name</label>
+    <input formControlName="name"  class="form-control" id="exampleInputPassword1" placeholder="name">
+    <div *ngIf="name!.invalid && name!.touched && name?.hasError?.('pattern')" class="alert alert-danger">
+name is invalid
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

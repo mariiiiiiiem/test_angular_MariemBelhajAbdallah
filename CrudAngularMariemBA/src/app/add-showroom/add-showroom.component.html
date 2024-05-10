@@ -1,0 +1,31 @@
+<div class="container">
+
+  <form [formGroup]="formshowroom" >
+    <div class="input-group p-2">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+          Matricule
+        </span>
+      </div>
+      <input type="text" class="form-control" formControlName="matricule">
+      <div *ngIf="matricule!.invalid && matricule!.touched && matricule?.hasError?.('pattern')" class="alert alert-danger">
+        matricule  is invalid
+      </div>
+    </div>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+          Description
+        </span>
+      </div>
+      <input type="text" class="form-control" formControlName="nom">
+
+    </div>
+
+    <div class="input-group p-3">
+      <input type="submit" class="btn btn-primary" (click)="onSubmit() " [disabled]="formshowroom.invalid">
+
+    </div>
+  </form>
+
+</div>

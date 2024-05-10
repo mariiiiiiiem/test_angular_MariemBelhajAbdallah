@@ -1,0 +1,14 @@
+<a routerLink="/addShowroom" class="btn btn-success">add Showroom</a>
+
+<div class="row">
+  <div *ngFor="let showroom of listShowroom;index as i"  class="card" style="width: 18rem;">
+    <div class="card-body" *ngIf="showroom.status">
+      <h5 class="card-title">{{showroom.id}}</h5>
+      <p class="card-text">{{showroom.matricule}}</p>
+      <a (click)="deleteAppart(showroom.id,i)" class="btn btn-danger">delete</a>
+      <!--  <a [routerLink]="['/update',appartement.id]" (click)="update()" class="btn btn-dark">update</a>-->
+        <a [routerLink]="['/showShowroom',showroom.id]" class="btn btn-primary">show</a>
+
+    </div>
+  </div>
+</div>
